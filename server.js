@@ -11,6 +11,7 @@ import mealRoutes from "./routes/meals.js";
 import profileRoutes from "./routes/profile.js";
 import orderRoutes from "./routes/orders.js";
 import contactRoute from "./routes/contact.js";
+import paymentRoutes from "./routes/payment.js";
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ app.use("/api/meals", mealRoutes);
 app.use("/api/profile", profileRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/contact", contactRoute);
+app.use("/api/payments", paymentRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
